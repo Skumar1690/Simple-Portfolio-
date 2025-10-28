@@ -1,1 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Saurabh Kumar — Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
+<style>
+:root{
+  --bg:#0a0f1f;
+  --card:#111a2d;
+  --text:#f4f7fc;
+  --muted:#9ea8c1;
+  --accent:#4f9cf9;
+  --accent2:#7dd87d;
+}
+*{box-sizing:border-box;}
+body{
+  margin:0;
+  font-family:Poppins,system-ui,sans-serif;
+  background:radial-gradient(circle at top left,#091224 0%,#0a0f1f 60%,#0a0f1f 100%);
+  color:var(--text);
+  min-height:100vh;
+  overflow-x:hidden;
+}
+.container{
+  max-width:1100px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:320px 1fr;
+  gap:32px;
+  padding:40px 20px;
+}
+.sidebar{
+  background:linear-gradient(160deg,#111a2d 0%,#0c1326 100%);
+  border-radius:20px;
+  padding:28px;
+  box-shadow:0 10px 40px rgba(0,0,0,0.5);
+  position:sticky;
+  top:30px;
+  height:fit-content;
+  animation:fadeIn 1.2s ease;
+}
+.avatar{text-align:center;}
+.avatar img{
+  width:150px;height:150px;border-radius:50%;
+  object-fit:cover;
+  border:4px solid var(--accent);
+  box-shadow:0 0 25px rgba(79,156,249,0.35);
+  transition:transform .5s ease,box-shadow .5s ease;
+}
+.avatar img:hover{transform:scale(1.06);box-shadow:0 0 40px rgba(79,156,249,0.5);}
+h1{font-size:22px;margin-top:18px;margin-bottom:5px;}
+.tagline{color:var(--muted);font-size:14px;margin-bottom:18px;}
+.contact a{
+  display:block;
+  color:var(--text);
+  text-decoration:none;
+  margin:6px 0;
+  font-size:14px;
+  transition:color .3s;
+}
+.contact a:hover{color:var(--accent);}
+.btn{
+  display:inline-block;
+  margin-top:16px;
+  background:linear-gradient(90deg,var(--accent),var(--accent2));
+  color:#031427;
+  padding:10px 18px;
+  border-radius:10px;
+  font-weight:700;
+  text-decoration:none;
+  transition:transform .3s ease,box-shadow .3s ease;
+}
+.btn:hover{transform:translateY(-4px);box-shadow:0 0 25px rgba(79,156,249,0.4);}
+#themeToggle{
+  margin-top:16px;
+  border:none;
+  background:rgba(255,255,255,0.08);
+  color:var(--text);
+  border-radius:10px;
+  padding:8px 14px;
+  cursor:pointer;
+  transition:background .3s;
+}
+#themeToggle:hover{background:rgba(255,255,255,0.15);}
+.main{
+  background:linear-gradient(160deg,#111a2d 0%,#0c1326 100%);
+  border-radius:20px;
+  padding:32px;
+  box-shadow:0 10px 40px rgba(0,0,0,0.4);
+  animation:fadeIn 1.3s ease;
+}
+h2{margin-top:0;font-size:22px;background:linear-gradient(90deg,var(--accent),var(--accent2));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.section{margin-bottom:40px;opacity:0;transform:translateY(40px);transition:all 0.8s ease;}
+.card{
+  background:rgba(255,255,255,0.03);
+  border-radius:14px;
+  padding:18px;
+  margin:10px 0;
+  transition:transform .3s,box-shadow .3s;
+}
+.card:hover{transform:translateY(-6px);box-shadow:0 15px 35px rgba(0,0,0,0.5);}
+.pill{
+  background:rgba(255,255,255,0.05);
+  border-radius:8px;
+  padding:6px 10px;
+  font-size:13px;
+  margin:4px;
+  display:inline-block;
+}
+.footer{text-align:center;color:var(--muted);font-size:13px;margin-top:20px;}
+@keyframes fadeIn{from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:translateY(0);}}
+@media(max-width:900px){
+  .container{grid-template-columns:1fr;}
+  .sidebar{position:relative;top:0;}
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <aside class="sidebar">
+    <div class="avatar">
+      <img src="https://www-animeherald-com.exactdn.com/wp-content/uploads/2022/08/The-Wind-Rises-001-20220820.jpg?strip=all&lossy=1&ssl=1" alt="Saurabh Kumar">
+      <h1>Saurabh Kumar</h1>
+      <div class="tagline">Frontend • Full-Stack Developer</div>
+    </div>
+    <div class="contact">
+      <a href="mailto:skeduc12@gmail.com">📧 skeduc12@gmail.com</a>
+      <a href="tel:+919793774657">📱 +91 97937 74657</a>
+      <a href="https://www.linkedin.com/in/saurabh-kumar-70a38221b/" target="_blank">🔗 LinkedIn</a>
+      <a href="https://github.com/Skumar1690" target="_blank">💻 GitHub</a>
+      <a href="https://leetcode.com/u/Kumarcodpe01/" target="_blank">🧠 LeetCode</a>
+    </div>
+    <a class="btn" href="https://drive.google.com/file/d/1ApqsLi-u4OFVXASbv1_m74hfkYsnEMGX/view?usp=sharing" target="_blank">Download Resume</a>
+    <button id="themeToggle">Toggle Theme</button>
+  </aside>
+
+  <main class="main">
+    <section class="section">
+      <h2>About Me</h2>
+      <p>
+        I am a recent B.Tech graduate in Mathematics & Computing from Delhi Technological University (Class of 2025).  
+        As a dedicated web developer, I specialize in building scalable, high-performance, and visually engaging web applications 
+        using modern technologies including React, Node.js, and TypeScript.  
+        I’m passionate about crafting intuitive digital experiences that merge design elegance with engineering precision.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Projects</h2>
+      <div class="card">
+        <strong>AST-Based Rule Engine</strong>
+        <p>Dynamic rule management UI with AST evaluator for nested business logic — Node.js + MySQL backend.</p>
+        <a href="https://github.com/Skumar1690/-Rule-Engine-with-AST" target="_blank" style="color:var(--accent)">View Project →</a>
+      </div>
+      <div class="card">
+        <strong>Weather-Watch</strong>
+        <p>Real-time weather monitoring dashboard using OpenWeatherMap API + Chart.js for live data visualization.</p>
+        <a href="https://github.com/Skumar1690/Weather-Watch-Real-Time-Monitoring-and-Summary" target="_blank" style="color:var(--accent)">View Project →</a>
+      </div>
+      <div class="card">
+        <strong>Wanderlust — Airbnb Clone</strong>
+        <p>Full-stack app built with Node.js, Express & MongoDB providing listing CRUD + authentication system.</p>
+        <a href="https://github.com/Skumar1690/Project-Wander-lust" target="_blank" style="color:var(--accent)">View Project →</a>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Experience</h2>
+      <div class="card">
+        <strong>Web Development & Research Intern — NRLDC (Grid Controller of India Ltd)</strong>
+        <p>Contributed to bilingual UI/UX enhancements for NRLDC’s website; optimized site responsiveness and accessibility.</p>
+        <small>Jul 2024 – Aug 2024</small>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Skills</h2>
+      <div>
+        <span class="pill">React</span><span class="pill">Node.js</span><span class="pill">Express</span>
+        <span class="pill">JavaScript</span><span class="pill">TypeScript</span><span class="pill">HTML / CSS</span>
+        <span class="pill">MySQL</span><span class="pill">MongoDB</span><span class="pill">Git / GitHub</span>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Education & Achievements</h2>
+      <div class="card">
+        <strong>B.Tech — Mathematics & Computing</strong><br>
+        <small>Delhi Technological University | 2021–2025 | CGPA 7.3</small>
+      </div>
+      <ul>
+        <li>Solved 300+ LeetCode problems</li>
+        <li>2★ coder on CodeChef</li>
+        <li>Mentor in Desh Ke Mentor Program</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Contact</h2>
+      <p>Have a project or opportunity in mind? Let’s build something exceptional together.</p>
+      <a class="btn" href="mailto:skeduc12@gmail.com">Send Message</a>
+    </section>
+
+    <div class="footer">© 2025 Saurabh Kumar • Crafted with creativity 💙</div>
+  </main>
+</div>
+
+<script>
+// Theme toggle
+const root=document.documentElement,btn=document.getElementById('themeToggle');
+let light=false;
+btn.addEventListener('click',()=>{
+  light=!light;
+  if(light){
+    root.style.setProperty('--bg','#f5f7ff');
+    root.style.setProperty('--card','#ffffff');
+    root.style.setProperty('--text','#0a0f1f');
+    root.style.setProperty('--muted','#4b4b4b');
+    document.body.style.background='linear-gradient(180deg,#f7faff,#edf2ff)';
+  }else{
+    root.style.setProperty('--bg','#0a0f1f');
+    root.style.setProperty('--card','#111a2d');
+    root.style.setProperty('--text','#f4f7fc');
+    root.style.setProperty('--muted','#9ea8c1');
+    document.body.style.background='radial-gradient(circle at top left,#091224,#0a0f1f 70%)';
+  }
+});
+
+// Scroll reveal animation
+const sections=document.querySelectorAll('.section');
+const reveal=()=>{sections.forEach(sec=>{
+  const top=sec.getBoundingClientRect().top;
+  if(top<window.innerHeight-100){sec.style.opacity=1;sec.style.transform='translateY(0)';}
+});};
+window.addEventListener('scroll',reveal);reveal();
+</script>
+</body>
+</html>
